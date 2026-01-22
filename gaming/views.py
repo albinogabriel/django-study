@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, 'gaming/pages/home.html')
+
+def gamerhub(request, id):
+    return render(request, 'gaming/pages/game-view.html')

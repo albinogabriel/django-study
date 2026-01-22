@@ -1,0 +1,16 @@
+{% include "gaming/partials/head.html" %}
+
+<body>
+
+    {% include "gaming/partials/header.html" %}
+
+    {% include "gaming/partials/search.html" %}
+
+    <main class="main-content-container">
+        {% block content %}{% endblock content %}
+    </main>
+
+    {% include "gaming/partials/footer.html" %}
+
+</body>
+</html>

@@ -1,40 +1,14 @@
-{% include "gaming/partials/head.html" %}
+{% extends "global/base.html" %}
 
-<body>
-    <header class="main-header-container">
-        <div class="main-header container">
-            <h1>
-                <a class="main-logo" href="/">
-                    <i class="fa-solid fa-gamepad main-logo-icon"></i>
-                    <span class="main-logo-text">Gamer Hub</span>
-                </a>
-            </h1>
-        </div>
-    </header>
+{% block content %}
+    <div class="main-content main-content-list container">
 
-    <div class="search-container">
-        <div class="container">
-            <form action="" class="search-form">
-                <input type="search" class="search-input" name="search">
-                <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
+        {% include 'gaming/partials/game.html' %}
+        {% include 'gaming/partials/game.html' %}
+        {% include 'gaming/partials/game.html' %}
+        {% include 'gaming/partials/game.html' %}
+        {% include 'gaming/partials/game.html' %}
+        {% include 'gaming/partials/game.html' %}
+
     </div>
-
-    <main class="main-content-container">
-        <div class="main-content main-content-list container">
-
-            {% include 'gaming/partials/game.html' %}
-
-        </div>
-    </main>
-
-    <footer class="main-footer">
-        <div class="developer">
-            <a href="https://www.instagram.com/albino.ck?igsh=MXdiYmxmZ2Vo1pbw==">By Gabriel Albino</a>
-        </div>
-    </footer>
-
-</body>
-
-</html>
+{% endblock content %}
