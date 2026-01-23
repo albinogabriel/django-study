@@ -1,4 +1,12 @@
-{% include "gaming/partials/head.html" %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    {% include "gaming/partials/head.html" %}
+
+    <title>{% block title %}{% endblock title %} | Gamer Hub</title>
+    
+</head>
 
 <body>
 
@@ -11,6 +19,8 @@
     </main>
 
     {% include "gaming/partials/footer.html" %}
+
+    
 
 </body>
 </html>

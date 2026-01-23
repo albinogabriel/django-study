@@ -1,11 +1,15 @@
 <div class="game game-list-item">
 
-    <div class="game-cover">
-        <img src="https://placehold.co/1280x720" alt="temporário">
-    </div>
+    <a href="{% url "gaming:gaming" game.id %}">
+        <div class="game-cover">
+            <img src="https://placehold.co/1280x720" alt="temporário">
+        </div>
+    </a>
 
     <div class="game-title-container">
-        <h2 class="game-title">Lorem ipsum dolor sit amet.</h2>
+        <a href="{% url "gaming:gaming" game.id %}">
+            <h2 class="game-title">Lorem ipsum dolor sit amet.</h2>
+        </a>
     </div>
 
     <div class="game-author-container">
@@ -47,11 +51,19 @@
 
     </div>
 
+    {% if detail_page is not True %}
     <footer class="game-footer">
-        <a href="/gamerhub/1/" class="game-read-more">
+        <a href="{% url "gaming:gaming" game.id %}" class="game-read-more">
             <i class="fa-solid fa-eye"></i>
             <span>Ver mais...</span>
         </a>
     </footer>
+    {% endif %}
+
+    {% if detail_page is True %}
+        <div class="detailed-description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi at voluptatem cum ad nam, itaque quod temporibus odio deserunt tempore vitae beatae magni assumenda nihil! Velit sit, esse aliquam asperiores modi fuga! Voluptate, tempora quidem cum aspernatur magni error at quia, dolorem obcaecati dignissimos iure quas corrupti molestiae veritatis et illum velit consequuntur! Veritatis quis natus id quaerat, ipsam in. Nostrum odio suscipit consectetur magnam minima perferendis voluptatem explicabo mollitia debitis, maiores saepe aliquam cum sunt nemo deserunt asperiores delectus illum commodi corporis distinctio nihil eos nulla ad cupiditate. Rem perferendis, consequuntur cupiditate magni maxime ab eos deleniti expedita laudantium dolorem doloribus minus distinctio maiores soluta dolorum doloremque porro aut pariatur iste, praesentium recusandae. Earum eius dolore libero debitis veritatis nam rem quo eligendi minima, reiciendis corrupti iste velit nostrum veniam omnis! At eaque illo architecto ullam natus ducimus nihil! Officia saepe alias, repudiandae nesciunt, nemo, corrupti fugiat beatae doloribus architecto optio ab. Nemo, minus dolores minima voluptatem rem tenetur obcaecati aut possimus dignissimos, fugiat saepe reprehenderit. Omnis soluta animi unde eligendi neque hic quaerat cumque eum vero sapiente recusandae suscipit id voluptate accusamus atque, distinctio a dolorum expedita necessitatibus repellat maxime quidem. Accusamus at ea atque earum repellendus, aspernatur nihil quod numquam. Veniam voluptas expedita et officia obcaecati, aspernatur a. Officia aspernatur similique quae aliquid molestiae officiis modi vel debitis quas ducimus architecto necessitatibus ad impedit animi quia libero, quasi cupiditate amet laboriosam velit quibusdam. Accusantium quaerat aperiam voluptatum quis dignissimos explicabo aliquid optio voluptatibus, minima odit ipsum. Est alias quas mollitia odio beatae, ad obcaecati minus doloremque itaque perspiciatis deleniti impedit, quam et? Qui enim minus molestiae. Consequatur consequuntur dolore quod inventore officiis quia numquam voluptatem vero odio facilis quos facere magni nihil veniam, eius laboriosam delectus earum! Est reprehenderit assumenda quidem autem modi quia porro beatae molestiae.
+        </div>
+    {% endif %}
     
 </div>
